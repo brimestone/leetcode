@@ -15,7 +15,7 @@ impl Solution {
                 }
             }
         }
-        vec![0]
+        vec![]
     }
 }
 
@@ -26,16 +26,23 @@ fn main() {
     assert_eq!(ans, Solution::two_sum(arr.clone(), tar.clone()));
     println!("Two sum: {:?}", Solution::two_sum(arr, tar));
 
-    let arr = vec![3,2,4];
-    let tar = 6;
-    let ans = vec![1,2];
     
-    assert_eq!(ans, Solution::two_sum(arr.clone(), tar.clone()));
-    println!("Two sum: {:?}", Solution::two_sum(arr, tar));
 
     let arr = vec![3,3];
     let tar = 6;
     let ans = vec![0,1];
+    assert_eq!(ans, Solution::two_sum(arr.clone(), tar.clone()));
+    println!("Two sum: {:?}", Solution::two_sum(arr, tar));
+
+    let arr = vec![2,3,4];
+    let tar = 6;
+    let ans = vec![0,2];
+    assert_eq!(ans, Solution::two_sum(arr.clone(), tar.clone()));
+    println!("Two sum: {:?}", Solution::two_sum(arr, tar));
+
+    let arr = vec![];
+    let tar = 1;
+    let ans: Vec<i32> = vec![];
     assert_eq!(ans, Solution::two_sum(arr.clone(), tar.clone()));
     println!("Two sum: {:?}", Solution::two_sum(arr, tar));
 }
